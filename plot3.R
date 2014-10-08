@@ -7,8 +7,8 @@ data = readPlotData()
 dates = strptime(paste(data[,1], data[,2]),"%d/%m/%Y %H:%M:%S")
 opar <- par() 
 
-png(file = "plot3.png", width = 480, height = 480, bg = "transparent")
-par(cex = .75, bg = "transparent")
+png(file = "plot3.png", width = 480, height = 480)
+par(bg = "transparent")
 
 plot(dates,data[,7], type = "l", xlab = "", ylab = "Energy sub metering")
 lines(dates,data[,8], col = "#FF3300")
